@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
 
 import { Stack, StackItem } from '@patternfly/react-core/dist/js/layouts/Stack';
 import { Title } from '@patternfly/react-core/dist/js/components/Title';
@@ -8,6 +9,8 @@ import {
   EmptyStateBody,
   EmptyStateIcon,
 } from '@patternfly/react-core/dist/js/components/EmptyState';
+import { Button } from '@patternfly/react-core/dist/js/components/Button';
+import { Spinner } from '@patternfly/react-core/dist/js/components/Spinner';
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
 import CheckCircleIcon from '@patternfly/react-icons/dist/js/icons/check-circle-icon';
 import { global_success_color_100 as globalSuccessColor100 } from '@patternfly/react-tokens/dist/js/global_success_color_100';
@@ -87,4 +90,34 @@ const NoMatchingRecs = () => {
   );
 };
 
-export { ErrorState, NoAffectedClusters, NoMatchingClusters, NoMatchingRecs };
+// used in Routes.js to create custom message instead of <InvalidObject>
+const ComingSoon = () => {
+  const intl = useIntl();
+  return (
+    <EmptyState variant="small">
+      <Spinner />
+      <Title headingLevel="h2" size="2xl">
+        {intl.formatMessage(messages.comingSoonTitle)}
+      </Title>
+      <EmptyStateBody>
+        {intl.formatMessage(messages.comingSoonBody)}
+      </EmptyStateBody>
+      <Button
+        component="a"
+        target="_blank"
+        variant="primary"
+        href="https://console.redhat.com/beta/openshift/insights/advisor/recommendations"
+      >
+        Recommendations
+      </Button>
+    </EmptyState>
+  );
+};
+
+export {
+  ErrorState,
+  NoAffectedClusters,
+  NoMatchingClusters,
+  NoMatchingRecs,
+  ComingSoon,
+};

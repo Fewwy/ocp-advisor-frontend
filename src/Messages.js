@@ -377,4 +377,15 @@ export default defineMessages({
     defaultMessage:
       'To view the content of this page, you must be granted a minimum of Advisor permissions from your Organization Administrator.',
   },
+  comingSoonTitle: {
+    id: 'comingSoonTitle',
+    description: 'Temporary Message Title',
+    defaultMessage: 'Coming soon',
+  },
+  comingSoonBody: {
+    id: 'comingSoonBody',
+    description: 'Temporary Message Body',
+    defaultMessage:
+      'Were currently working on this page. In the meantime, you can visit the Insights Advisor recommendations page to view potential issues with your clusters',
+  },
 });
