@@ -52,8 +52,8 @@
     "semver": "^7.7.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9",
-    "@babel/plugin-transform-runtime": "^7.26.9",
+    "@babel/core": "^7.26.10",
+    "@babel/plugin-transform-runtime": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
     "@babel/preset-react": "^7.26.3",
     "@cypress/code-coverage": "^3.13.12",
@@ -70,7 +70,7 @@
     "@testing-library/user-event": "^14.5.2",
     "babel-core": "6.26.3",
     "babel-jest": "^29.7.0",
-    "babel-plugin-formatjs": "^10.5.35",
+    "babel-plugin-formatjs": "^10.5.36",
     "babel-plugin-istanbul": "^7.0.0",
     "cypress": "14.1.0",
     "eslint": "8.56.0",
